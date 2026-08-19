@@ -3,24 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hovedo's Way HLC — Coming Soon</title>
-  <meta name="description" content="Hovedo's Way HLC — coaching. Site coming soon.">
+  <title>Hovedo&rsquo;s Way HLC &mdash; Coming Soon</title>
+  <meta name="description" content="Hovedo's Way Health and Life Coaching. Coming soon.">
+  <meta name="theme-color" content="#000000">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <p class="brand">Hovedo's Way HLC</p>
-  </header>
+  <canvas id="rain" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
 
-  <main>
-    <h1>Hovedo's Way HLC — Coming Soon</h1>
-    <p>Placeholder content. The real site is on its way.</p>
-  </main>
+  <div class="shell">
+    <header>
+      <p class="prompt">hlc.hovedosway.com</p>
+    </header>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Hovedo's Way HLC</p>
-    <p class="build">build: v2</p>
-  </footer>
+    <main>
+      <h1>
+        <span class="title">Hovedo&rsquo;s Way</span>
+        <span class="subtitle">Health and Life Coaching</span>
+      </h1>
+      <p class="soon">Coming Soon<span class="cursor" aria-hidden="true">&#9608;</span></p>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Hovedo&rsquo;s Way HLC</p>
+      <p class="build">build: v3</p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
