@@ -3,34 +3,189 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hovedo&rsquo;s Way HLC &mdash; Coming Soon</title>
-  <meta name="description" content="Hovedo's Way Health and Life Coaching. Coming soon.">
-  <meta name="theme-color" content="#000000">
+  <title>Hovedo&rsquo;s Way &mdash; Health &amp; Life Coaching</title>
+  <meta name="description" content="Health and life coaching with Vinson Sullivan. The Art of Being Liked, habit-change coaching, and diabetes coaching from someone who lives it.">
+  <meta name="theme-color" content="#cc7010">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="rain" aria-hidden="true"></canvas>
-  <div class="scanlines" aria-hidden="true"></div>
-  <div class="vignette" aria-hidden="true"></div>
 
-  <div class="shell">
-    <header>
-      <p class="prompt">hlc.hovedosway.com</p>
-    </header>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">
+        <img src="assets/logo.png" alt="Hovedo&rsquo;s Way Health &amp; Life Coaching">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="inquiry.html">Inquiry</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-      <h1>
-        <span class="title">Hovedo&rsquo;s Way</span>
-        <span class="subtitle">Health and Life Coaching</span>
-      </h1>
-      <p class="soon">Coming Soon<span class="cursor" aria-hidden="true">&#9608;</span></p>
-    </main>
+  <main>
 
-    <footer>
-      <p>&copy; <span id="year"></span> Hovedo&rsquo;s Way HLC</p>
-      <p class="build">build: v3</p>
-    </footer>
-  </div>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Health &amp; Life Coaching</p>
+        <h1>Being liked starts with liking yourself.</h1>
+        <p class="lede">
+          Most of us spend years performing for approval and calling it connection.
+          Coaching is where that stops &mdash; where you get honest about your patterns,
+          make peace with what you find, and start showing up as yourself.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="services.html">Explore the programs</a>
+          <a class="btn btn-secondary" href="inquiry.html">Start a conversation</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="wrap">
+        <p class="eyebrow">Why coaching</p>
+        <h2>What working with a coach actually does</h2>
+        <p class="lede" style="margin-bottom:2.5rem">
+          Not advice. Not a lecture. A structured, confidential partnership that turns
+          what you already know into what you actually do.
+        </p>
+
+        <div class="grid grid-3">
+          <article class="card benefit">
+            <div class="icon">01</div>
+            <h3>Clarity before change</h3>
+            <p>You cannot shift a pattern you have never named. The first work is seeing yourself clearly, without flinching.</p>
+          </article>
+          <article class="card benefit">
+            <div class="icon">02</div>
+            <h3>Steps sized to your life</h3>
+            <p>Change fails when it is too big to sustain. We build one small step at a time, matched to the life you actually have.</p>
+          </article>
+          <article class="card benefit">
+            <div class="icon">03</div>
+            <h3>Accountability without shame</h3>
+            <p>Someone in your corner between sessions &mdash; expecting progress, not perfection, and never trading in guilt.</p>
+          </article>
+          <article class="card benefit">
+            <div class="icon">04</div>
+            <h3>Habits that outlast us</h3>
+            <p>The goal is not to need a coach forever. Habit-change work wires the practice in so it holds after the program ends.</p>
+          </article>
+          <article class="card benefit">
+            <div class="icon">05</div>
+            <h3>The whole person</h3>
+            <p>Health and life are not separate files. Sleep, stress, food, boundaries and self-talk all pull on the same thread.</p>
+          </article>
+          <article class="card benefit">
+            <div class="icon">06</div>
+            <h3>A place to say it out loud</h3>
+            <p>A confidential space to admit the thing you have been managing alone. Naming it is where the work begins.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <p class="eyebrow">Programs</p>
+        <h2>Two ways to work together</h2>
+
+        <div class="grid grid-2" style="margin-top:2rem">
+          <article class="card">
+            <h3>The Art of Being Liked</h3>
+            <p style="color:var(--brand-deep);font-weight:600;font-size:.9rem">by YOURSELF and others &middot; 12 weeks</p>
+            <p>
+              My own program. Three phases &mdash; learning to see and accept yourself,
+              learning to show up with others, then returning to yourself with everything
+              you have gained. Built for people who are tired of performing.
+            </p>
+            <p><a href="services.html#art-of-being-liked">See the twelve weeks &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <h3>Health Coaching</h3>
+            <p style="color:var(--brand-deep);font-weight:600;font-size:.9rem">Habit change &middot; Diabetes focus</p>
+            <p>
+              Practical, daily-life health coaching built on habit-change method &mdash;
+              with a particular focus on living well with diabetes. I coach this because
+              I live it, not because I read about it.
+            </p>
+            <p><a href="services.html#health-coaching">See health coaching &rarr;</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="wrap">
+        <p class="eyebrow">About</p>
+        <h2>Meet your coach</h2>
+
+        <div class="todo" style="margin-top:1.5rem">
+          <strong>DRAFT PLACEHOLDER &mdash; your bio goes here</strong>
+          Send me the raw facts (how you got into coaching, what you did before, why this
+          work) and I will write this section. A headshot goes here too &mdash; drop it in
+          <code>Images\</code> and I will place it.
+        </div>
+
+        <p style="margin-top:1.5rem">
+          Vinson Sullivan is a certified Health Coach and Life Coach, and the creator of
+          <em>The Art of Being Liked, by YOURSELF and others</em>.
+        </p>
+        <p><a href="services.html#credentials">See credentials &rarr;</a></p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap" style="text-align:center">
+        <h2>Ready when you are</h2>
+        <p class="lede" style="margin:0 auto 2rem">
+          No pressure and no pricing games &mdash; just a conversation about where you are
+          and whether this is a fit.
+        </p>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn btn-primary" href="inquiry.html">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <h4>Hovedo&rsquo;s Way HLC</h4>
+          <p style="max-width:22rem">Health and life coaching for people ready to stop performing and start showing up.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="inquiry.html">Inquiry</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get started</h4>
+          <ul>
+            <li><a href="inquiry.html">Contact</a></li>
+            <li><a href="inquiry.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">
+        <span>&copy; <span id="year"></span> Hovedo&rsquo;s Way HLC. All rights reserved.</span>
+        <span>Coaching is not medical care, therapy, or a substitute for either.</span>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
