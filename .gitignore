@@ -9,3 +9,6 @@ desktop.ini
 
 # Logs
 *.log
+
+# Source artwork and originals - the web-ready copies live in assets/
+/Images/
