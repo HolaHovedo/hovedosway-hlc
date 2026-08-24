@@ -54,24 +54,33 @@
 
             <p class="lede" style="margin-bottom:1.25rem">
               Prefer email? Reach me directly at
-              <a href="mailto:vinson@hovedosway.com">vinson@hovedosway.com</a>.
+              <a href="mailto:admin@hovedosway.com">admin@hovedosway.com</a>.
             </p>
 
-            <div class="todo">
-              <strong>STUBBED &mdash; form service not yet connected</strong>
-              The form below is markup only and does not submit anywhere yet. Pick a form
-              service and I will wire it to vinson@hovedosway.com in about fifteen minutes.
-              The email link above works today.
+            <div class="todo" id="form-setup-note">
+              <strong>ONE STEP LEFT &mdash; paste the access key</strong>
+              The form is fully coded and ready. Get a free access key at
+              <a href="https://web3forms.com" target="_blank" rel="noopener">web3forms.com</a>
+              using <strong>admin@hovedosway.com</strong>, then replace
+              <code>WEB3FORMS_ACCESS_KEY_GOES_HERE</code> in <code>inquiry.html</code>.
+              Until then the form tells visitors to email instead of failing silently.
             </div>
 
-            <form style="margin-top:1.5rem" onsubmit="return false;">
+            <form id="inquiry-form" style="margin-top:1.5rem" novalidate>
+              <!-- Web3Forms delivers to the inbox this key was issued for. -->
+              <input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY_GOES_HERE">
+              <input type="hidden" name="subject" value="New coaching inquiry from hlc.hovedosway.com">
+              <input type="hidden" name="from_name" value="Hovedo&rsquo;s Way HLC website">
+              <!-- Honeypot: bots fill hidden fields, people do not. -->
+              <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
               <div class="form-field">
                 <label for="name">Your name</label>
-                <input type="text" id="name" name="name" autocomplete="name" placeholder="First and last">
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="First and last" required>
               </div>
               <div class="form-field">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com">
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required>
               </div>
               <div class="form-field">
                 <label for="interest">What are you interested in?</label>
@@ -84,7 +93,7 @@
               </div>
               <div class="form-field">
                 <label for="message">What would you like to change?</label>
-                <textarea id="message" name="message" rows="5" placeholder="A sentence or two is plenty."></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="A sentence or two is plenty." required></textarea>
               </div>
 
               <p class="form-note">
@@ -94,6 +103,7 @@
               </p>
 
               <button class="btn btn-primary" type="submit">Send inquiry</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             </form>
           </div>
 
