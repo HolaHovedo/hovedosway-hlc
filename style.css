@@ -267,6 +267,28 @@ section.alt { background: var(--surface); border-block: 1px solid var(--rule); }
 .week h4 { font-size: 1.05rem; margin-bottom: .45rem; }
 .week p { font-size: .92rem; color: var(--muted); margin: 0; }
 
+/* --- Specialty callout (a focus nested inside an offering) ----------- */
+
+.specialty {
+  margin-top: 2.5rem;
+  padding: 1.8rem 2rem;
+  background: var(--brand-tint);
+  border: 1px solid #f0d9bf;
+  border-left: 5px solid var(--brand);
+  border-radius: var(--radius);
+}
+
+.specialty h3 {
+  font-size: 1.35rem;
+  margin-bottom: .5rem;
+}
+
+.specialty p {
+  margin: 0;
+  color: #6b4a28;
+  max-width: 46rem;
+}
+
 /* --- Pull quote ------------------------------------------------------ */
 
 .pull {
