@@ -31,7 +31,9 @@
 
   var status = document.getElementById("form-status");
   var button = form.querySelector('button[type="submit"]');
-  var CONTACT = "admin@hovedosway.com";
+  // Shown to visitors if the form cannot send - matches the address on the page.
+  // Submissions themselves go to admin@ via the Web3Forms access key.
+  var CONTACT = "vinson@hovedosway.com";
   var PLACEHOLDER_KEY = "WEB3FORMS_ACCESS_KEY_GOES_HERE";
 
   function say(text, kind) {
