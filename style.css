@@ -1,14 +1,16 @@
 /* ==========================================================================
    Hovedo's Way HLC - design system
-   Brand orange #cd5d17, taken from the Illustrator logo source.
+   Brand orange #f4701b - vivid Goku-gi orange, same hue family as the
+   original Illustrator #cd5d17 but far more saturated.
    Fonts are a PROPOSAL (Fraunces + Inter) - easy to swap.
    ========================================================================== */
 
 :root {
-  --brand: #cd5d17;          /* from the Illustrator source file */
-  --brand-deep: #904110;
-  --brand-solid: #c15716;    /* brand hue, deep enough for white text (4.5:1) */
-  --brand-tint: #faefe8;
+  --brand: #f4701b;          /* identity: logo arrow, rules, borders */
+  --brand-deep: #b95515;     /* links + eyebrows, 4.5:1 on page bg */
+  --brand-hover: #e26410;    /* button hover, one notch deeper */
+  --brand-solid: #be5715;    /* reserved: brand hue deep enough for white text */
+  --brand-tint: #fef1e8;
 
   --navy: #1b3050;
   --navy-soft: #2f4a70;
@@ -98,11 +100,15 @@ a:hover { color: var(--brand); }
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: 74px;
+  min-height: 88px;
   position: relative;
 }
 
-.logo img { display: block; height: 46px; width: auto; }
+.logo img {
+  display: block;
+  height: clamp(48px, 5.2vw, 60px);
+  width: auto;
+}
 
 .nav-toggle {
   display: none;
@@ -188,8 +194,10 @@ section.alt { background: var(--surface); border-block: 1px solid var(--rule); }
   transition: background-color .15s, color .15s, border-color .15s;
 }
 
-.btn-primary { background: var(--brand-solid); color: #fff; }
-.btn-primary:hover { background: var(--brand-deep); color: #fff; }
+/* Dark ink on the full-strength brand orange reads at 5.6:1 - better than
+   white on a deepened orange (4.6:1), and it keeps the colour vivid. */
+.btn-primary { background: var(--brand); color: var(--ink); }
+.btn-primary:hover { background: var(--brand-hover); color: var(--ink); }
 
 .btn-secondary { border-color: var(--navy); color: var(--navy); background: transparent; }
 .btn-secondary:hover { background: var(--navy); color: #fff; }
@@ -274,7 +282,7 @@ section.alt { background: var(--surface); border-block: 1px solid var(--rule); }
   margin-top: 2.5rem;
   padding: 1.8rem 2rem;
   background: var(--brand-tint);
-  border: 1px solid #f1d2be;
+  border: 1px solid #fcd4bb;
   border-left: 5px solid var(--brand);
   border-radius: var(--radius);
 }
@@ -286,7 +294,7 @@ section.alt { background: var(--surface); border-block: 1px solid var(--rule); }
 
 .specialty p {
   margin: 0;
-  color: #5c2a0a;
+  color: #5d2b0a;
   max-width: 46rem;
 }
 
