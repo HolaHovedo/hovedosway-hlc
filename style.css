@@ -1,13 +1,14 @@
 /* ==========================================================================
    Hovedo's Way HLC - design system
-   Brand orange #cc7010 sampled directly from the logo artwork.
+   Brand orange #cd5d17, taken from the Illustrator logo source.
    Fonts are a PROPOSAL (Fraunces + Inter) - easy to swap.
    ========================================================================== */
 
 :root {
-  --brand: #cc7010;
-  --brand-deep: #904c08;
-  --brand-tint: #fbeee0;
+  --brand: #cd5d17;          /* from the Illustrator source file */
+  --brand-deep: #904110;
+  --brand-solid: #c15716;    /* brand hue, deep enough for white text (4.5:1) */
+  --brand-tint: #faefe8;
 
   --navy: #1b3050;
   --navy-soft: #2f4a70;
@@ -187,7 +188,7 @@ section.alt { background: var(--surface); border-block: 1px solid var(--rule); }
   transition: background-color .15s, color .15s, border-color .15s;
 }
 
-.btn-primary { background: var(--brand); color: #fff; }
+.btn-primary { background: var(--brand-solid); color: #fff; }
 .btn-primary:hover { background: var(--brand-deep); color: #fff; }
 
 .btn-secondary { border-color: var(--navy); color: var(--navy); background: transparent; }
@@ -273,7 +274,7 @@ section.alt { background: var(--surface); border-block: 1px solid var(--rule); }
   margin-top: 2.5rem;
   padding: 1.8rem 2rem;
   background: var(--brand-tint);
-  border: 1px solid #f0d9bf;
+  border: 1px solid #f1d2be;
   border-left: 5px solid var(--brand);
   border-radius: var(--radius);
 }
@@ -285,7 +286,7 @@ section.alt { background: var(--surface); border-block: 1px solid var(--rule); }
 
 .specialty p {
   margin: 0;
-  color: #6b4a28;
+  color: #5c2a0a;
   max-width: 46rem;
 }
 
