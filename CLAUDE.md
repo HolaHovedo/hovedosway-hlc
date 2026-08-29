@@ -65,11 +65,14 @@ literally and 404s on extensionless paths.
 Do not write internal links as `/services`. They will work in production and
 appear broken locally, which is the confusing way round.
 
-`public/404.html` is the deliberate exception: it uses **absolute** paths
-(`/style.css`, `/assets/logo.svg`). It gets served at arbitrary URLs, so
-relative paths would resolve against a non-existent directory. This means the
-404 page cannot be previewed properly on the local server — check it against
-the deployed URL instead.
+`public/404.html` differs on **one axis only**: its paths are absolute
+(`/style.css`, `/services.html`) rather than relative. It gets served at
+arbitrary URLs, so relative paths would resolve against a directory that does
+not exist. The `.html` extension rule still applies there — absolute and
+extensioned satisfy both rules at once.
+
+Because its paths are absolute, the 404 page cannot be previewed properly on
+the local server; check it against the deployed URL instead.
 
 ## Copy conventions
 
