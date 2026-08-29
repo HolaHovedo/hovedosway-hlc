@@ -221,6 +221,16 @@ section.alt { background: var(--surface); border-block: 1px solid var(--rule); }
 .card h3 { margin-bottom: .4rem; }
 .card p { color: var(--muted); font-size: .95rem; }
 
+/* The flagship programme: same card, given rank by a brand rule and a
+   larger heading, so it leads without shouting. */
+.card-feature {
+  border-top: 4px solid var(--brand);
+  padding-top: 1.9rem;
+}
+
+.card-feature h3 { font-size: 1.5rem; }
+.card-feature > p:nth-of-type(2) { font-size: 1.02rem; }
+
 .benefit .icon {
   width: 40px; height: 40px;
   display: grid; place-items: center;
