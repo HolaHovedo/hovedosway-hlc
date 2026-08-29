@@ -276,6 +276,26 @@ section.alt { background: var(--surface); border-block: 1px solid var(--rule); }
 .week h4 { font-size: 1.05rem; margin-bottom: .45rem; }
 .week p { font-size: .92rem; color: var(--muted); margin: 0; }
 
+/* --- Bio -------------------------------------------------------------
+   Single column for now. When a headshot arrives, .bio-layout can wrap
+   this in a two-column grid without touching the copy. */
+
+.bio {
+  max-width: 44rem;
+}
+
+.bio p {
+  font-size: 1.05rem;
+}
+
+.bio-heading {
+  font-size: 1.4rem;
+  margin: 2.5rem 0 .9rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--rule);
+  max-width: 44rem;
+}
+
 /* --- Specialty callout (a focus nested inside an offering) ----------- */
 
 .specialty {
