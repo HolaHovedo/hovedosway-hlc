@@ -54,6 +54,23 @@ Logo: `height: clamp(48px, 5.2vw, 60px)`.
 switch them to white text; white on `--brand` is 2.92:1 and fails WCAG AA.
 `--brand-solid` exists for the case where white text is genuinely needed.
 
+## Linking convention
+
+Internal links use the **`.html` extension** — `services.html`, not `/services`.
+
+Cloudflare Pages strips the extension in production (308 to `/services`), so
+these links work live *and* under the local `http.server`, which serves files
+literally and 404s on extensionless paths.
+
+Do not write internal links as `/services`. They will work in production and
+appear broken locally, which is the confusing way round.
+
+`public/404.html` is the deliberate exception: it uses **absolute** paths
+(`/style.css`, `/assets/logo.svg`). It gets served at arbitrary URLs, so
+relative paths would resolve against a non-existent directory. This means the
+404 page cannot be previewed properly on the local server — check it against
+the deployed URL instead.
+
 ## Copy conventions
 
 1. Service names are title case: **Health Coaching**, **Life Coaching**,
