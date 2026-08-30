@@ -12,3 +12,11 @@ desktop.ini
 
 # Source artwork and originals - the web-ready copies live in assets/
 /Images/
+
+# The artwork and coaching reference material live outside the repo, in
+# OneDrive (see CLAUDE.md). These names are ignored defensively, in case
+# that folder is ever copied or synced in. Unanchored so they match at any
+# depth. HovedosWay-Reference holds HCI training material that must never
+# be published.
+HovedosWay-Source/
+HovedosWay-Reference/

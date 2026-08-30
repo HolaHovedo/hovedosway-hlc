@@ -23,6 +23,29 @@ Images/          <- gitignored. Source artwork. Never commit.
 Anything placed in `public/` is served on the live domain. Keep working
 notes, source files and scratch work at the repo root or outside it.
 
+## Source artwork
+
+Web-ready copies live in `public/assets/`. The originals live **outside the
+repo**, in OneDrive:
+
+```
+C:\Users\vinso\OneDrive\hovedosway-hlc\
+  HovedosWay-Source/       Logo artwork + certificate PDFs
+  HovedosWay-Reference/    HCI course material - NEVER publishable
+```
+
+`HovedosWay-Reference/` holds roughly 488 files of Health Coach Institute
+training material. It must never enter the repo or the site. Both folder
+names are ignored in `.gitignore` defensively. The older `/Images/` rule
+stays in place — it still applies on the other machine.
+
+`HovedosWay-Source/Logo/SiteLogo-New.svg` is the **working file the current
+logo was derived from**, not a pending update. Despite the name, do not swap
+it into `public/assets/` — the deployed `logo.svg` is correct.
+
+The two certificate PDFs in `HovedosWay-Source/` are byte-identical to the
+copies already in `public/assets/certificates/`.
+
 ## Branches
 
 | Branch  | Deploys to                          | Contains                 |
