@@ -97,12 +97,30 @@ extensioned satisfy both rules at once.
 Because its paths are absolute, the 404 page cannot be previewed properly on
 the local server; check it against the deployed URL instead.
 
+## Link previews
+
+Every page carries Open Graph tags pointing at `public/assets/og-image.jpg`
+— the wordmark centred on a 1200×630 card. Without an explicit `og:image`,
+scrapers pick the largest image on the page, which on the home page is the
+headshot.
+
+The `og:image` path is **root-relative**, so it resolves on both the
+production and draft hosts with no launch-time edit. If some platform fails
+to show it, switch that one tag to the absolute production URL.
+
+Regenerate the card from `HovedosWay-Source/Logo/HWHLC-Site Logo.png` if the
+logo ever changes; it is a plain centre-composite on a `#fefefe` background,
+matching the source PNG's own backdrop so there is no visible seam.
+
 ## Copy conventions
 
 1. Service names are title case: **Health Coaching**, **Life Coaching**,
    **Diabetes Focus**, **General Life Coaching**. The condition itself stays
    lowercase — "I live with diabetes".
-2. Use **"HIPAA-aligned"** throughout. Never "HIPAA-compliant".
+2. The site makes **no HIPAA claim**. Sessions run by phone or video call,
+   so there is no HIPAA-covered platform to point at, and claiming one would
+   be inaccurate. If a platform is adopted later and the claim returns, the
+   wording is **"HIPAA-aligned"** — never "HIPAA-compliant".
 3. Name the certifying body **only** in the Services credentials block.
    Describe methodology generically elsewhere ("years of research and
    coursework").
