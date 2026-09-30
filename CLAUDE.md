@@ -23,6 +23,29 @@ Images/          <- gitignored. Source artwork. Never commit.
 Anything placed in `public/` is served on the live domain. Keep working
 notes, source files and scratch work at the repo root or outside it.
 
+## Source artwork
+
+Web-ready copies live in `public/assets/`. The originals live **outside the
+repo**, in OneDrive:
+
+```
+C:\Users\vinso\OneDrive\hovedosway-hlc\
+  HovedosWay-Source/       Logo artwork + certificate PDFs
+  HovedosWay-Reference/    HCI course material - NEVER publishable
+```
+
+`HovedosWay-Reference/` holds roughly 488 files of Health Coach Institute
+training material. It must never enter the repo or the site. Both folder
+names are ignored in `.gitignore` defensively. The older `/Images/` rule
+stays in place — it still applies on the other machine.
+
+`HovedosWay-Source/Logo/SiteLogo-New.svg` is the **working file the current
+logo was derived from**, not a pending update. Despite the name, do not swap
+it into `public/assets/` — the deployed `logo.svg` is correct.
+
+The two certificate PDFs in `HovedosWay-Source/` are byte-identical to the
+copies already in `public/assets/certificates/`.
+
 ## Branches
 
 | Branch  | Deploys to                          | Contains                 |
@@ -54,12 +77,50 @@ Logo: `height: clamp(48px, 5.2vw, 60px)`.
 switch them to white text; white on `--brand` is 2.92:1 and fails WCAG AA.
 `--brand-solid` exists for the case where white text is genuinely needed.
 
+## Linking convention
+
+Internal links use the **`.html` extension** — `services.html`, not `/services`.
+
+Cloudflare Pages strips the extension in production (308 to `/services`), so
+these links work live *and* under the local `http.server`, which serves files
+literally and 404s on extensionless paths.
+
+Do not write internal links as `/services`. They will work in production and
+appear broken locally, which is the confusing way round.
+
+`public/404.html` differs on **one axis only**: its paths are absolute
+(`/style.css`, `/services.html`) rather than relative. It gets served at
+arbitrary URLs, so relative paths would resolve against a directory that does
+not exist. The `.html` extension rule still applies there — absolute and
+extensioned satisfy both rules at once.
+
+Because its paths are absolute, the 404 page cannot be previewed properly on
+the local server; check it against the deployed URL instead.
+
+## Link previews
+
+Every page carries Open Graph tags pointing at `public/assets/og-image.jpg`
+— the wordmark centred on a 1200×630 card. Without an explicit `og:image`,
+scrapers pick the largest image on the page, which on the home page is the
+headshot.
+
+The `og:image` path is **root-relative**, so it resolves on both the
+production and draft hosts with no launch-time edit. If some platform fails
+to show it, switch that one tag to the absolute production URL.
+
+Regenerate the card from `HovedosWay-Source/Logo/HWHLC-Site Logo.png` if the
+logo ever changes; it is a plain centre-composite on a `#fefefe` background,
+matching the source PNG's own backdrop so there is no visible seam.
+
 ## Copy conventions
 
 1. Service names are title case: **Health Coaching**, **Life Coaching**,
    **Diabetes Focus**, **General Life Coaching**. The condition itself stays
    lowercase — "I live with diabetes".
-2. Use **"HIPAA-aligned"** throughout. Never "HIPAA-compliant".
+2. The site makes **no HIPAA claim**. Sessions run by phone or video call,
+   so there is no HIPAA-covered platform to point at, and claiming one would
+   be inaccurate. If a platform is adopted later and the claim returns, the
+   wording is **"HIPAA-aligned"** — never "HIPAA-compliant".
 3. Name the certifying body **only** in the Services credentials block.
    Describe methodology generically elsewhere ("years of research and
    coursework").
